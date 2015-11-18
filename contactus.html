@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Welcome to Vecta Corp.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+
+
+    <!-- Tab interface	  -->
+    
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <!-- Stick jquery functionality   -->
+    <script type="text/javascript" src="js/jquery.sticky.js"></script>
+
+
+    <!-- jQuery-ui Tooltips		-->
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.structure.min.css" />
+<!--    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> -->
+    <script src="http://malsup.github.com/jquery.form.js"></script> 
+<!--    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script> -->
+
+    <script src="js/scripts.js"></script>
+    <script src="js/jquery.mobilemenu.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#responsive-menu').mobileMenu();
+        });
+    </script>
+</head>
+
+<body>
+    <main class="container">
+        <figure class="three columns">
+            <img src="images/logo.gif" class="scale-with-grid" alt="">
+        </figure>
+
+        <nav class="thirteen columns">
+ 			<ul  id="responsive-menu tooltip">
+				<li><a href="index.html" title="Business solutions to help companies achieve success ">Home</a></li>
+				<li><a href="aboutus.html" title="Expertise in strategy, design and technology">About Us</a></li>
+				<li><a href="solutions.html" title="Vecta Corp. offers 3 solutions for prospecting, converting, and retaining customers.">Solutions</a></li>
+				<li ><a href="support.html" title="Flexible support solutions to meet your needs" >Support</a></li>
+				<li><a href="contactus.html" title="We're ready to discuss your business needs">Contact Us</a></li>
+			</ul>
+        </nav>
+
+        <header class="sixteen columns">
+            <img src="images/header.gif" class="scale-with-grid" alt="">
+        </header>
+        
+        <div id="confirmSubmission" title="Submission Confirmed">
+              <p>Thank you! We successfully received your submission and will follow up with you within 48 hours.</p>
+        </div>
+
+        <section id="welcome" class="eleven columns">
+            <h4>Contact Us</h4>
+            <form id="contactForm" name="contactform" action="http://www.vectacorp.com/vc/scripts/contactus.asp" method="post">
+                <fieldset>
+                    <legend>Contact a Sales Representative</legend>
+                    Name:
+                    <input type="text" name="name" maxlength="30" required=""> Company Name:
+                    <input type="text" name="companyname" maxlength="30" required=""> Phone:
+                    <input type="tel" name="phonenumber" maxlength="25" required="" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Format: 555-555-5555"> Email:
+                    <input type="email" name="email" maxlength="30" required=""> 
+                    
+
+                    
+                    <label for="product">What VectaCorp products are you interested in?</label>
+                    <div id="chkboxes">
+                        <input type="checkbox" name="product" value="vProspect" id="vProspect"><label for="vProspect">vProspect 2.0</label>                        
+                        <input type="checkbox" name="product" value="vConvert" id="vConvert"><label for="vConvert">vConvert 2.0</label>
+                        <input type="checkbox" name="product" value="vRetain" id="vRetain"><label for="vRetain">vRetain 1.0</label>
+                    </div>
+                    <br>
+                    <label for="infrastructure">What is your current infrastructure?</label>
+                    <div id="infrastructure">
+                        <input type="radio" name="infrastructure" id="macSys" />
+                        <label for="macSys">Mac</label>
+                        <input type="radio" name="infrastructure" id="linuxSys" />
+                        <label for="linuxSys">Linux</label>
+                        <input type="radio" name="infrastructure" id="unixSys" />
+                        <label for="unixSys">Unix</label>
+                        <input type="radio" name="infrastructure" id="winSys" />
+                        <label for="winSys">Windows</label>
+                    </div>
+
+
+                    <br>
+                    
+                    <label for="companysize">How many employees do you have?</label>
+                    <select name="companysize" id="companysize">
+                        <option value="1-10">1-10</option>
+                        <option value="11-100">11-100</option>
+                        <option value="101-1000">101-1000</option>
+                        <option value="More than 1000">More than 1000</option>
+                    </select>
+                    
+                    
+                    <br><br>
+                      <label for="hearaboutus">How did you hear about us?</label>
+                    
+                    <select name="hearaboutus" multiple="" size="5">
+                        <option value="Magazine Ad">Magazine Ad</option>
+                        <option value="Radio Ad">Radio Ad</option>
+                        <option value="TV Ad">TV Ad</option>
+                        <option value="Word of Mouth">Word of Mouth</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    Questions or comments for our sales representatives?
+                    <textarea name="questions" size="30" rows="5"></textarea>
+<!--                    <input type="submit" name="submit" value="Submit Now">-->
+                        <button id="submitBtn" >Submit Now</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="testimonials" class="five columns">
+            <h4>Map</h4>
+            <p>&nbsp;</p>
+
+        </section>
+    </main>
+</body>
+
+</html>
